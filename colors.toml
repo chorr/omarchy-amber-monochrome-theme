@@ -13,7 +13,7 @@ selection_background = "#2a1f12"
 # Everything stays in the black → dark amber-brown → golden → bright amber family.
 # No cool grays or competing hues.
 
-color0  = "#1a120c"   # deep warm black
+color0  = "#33281d"   # deep warm black (lifted for better punctuation/comment contrast)
 color1  = "#7a4a28"   # dim amber-brown (semantic red)
 color2  = "#c99a4e"   # golden amber
 color3  = "#6b4630"   # dark warm brown
@@ -21,7 +21,7 @@ color4  = "#e68e0d"   # accent (bright phosphor highlight)
 color5  = "#8a5a3a"   # muted warm brown
 color6  = "#a08050"   # warm amber-gray
 color7  = "#c9a36a"   # main phosphor text
-color8  = "#251a12"   # darker warm black
+color8  = "#5f4635"   # warmer black for comments, punctuation, linenr, virtuals (lifted for readability)
 color9  = "#9a5c35"   # brighter dim amber-brown
 color10 = "#e8b060"   # light golden
 color11 = "#8f6640"   # mid warm brown
