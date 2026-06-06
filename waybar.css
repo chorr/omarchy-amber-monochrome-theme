@@ -2,6 +2,10 @@
 @define-color background #0c0c0c;
 @define-color accent #e68e0d;
 
+window#waybar {
+    background-color: #000000;
+}
+
 /* workspace active/urgent marker - using primary/accent color for point notation */
 #workspaces button.active {
     color: @accent;
