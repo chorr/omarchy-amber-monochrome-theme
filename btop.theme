@@ -1,0 +1,93 @@
+# ────────────────────────────────────────────────────────────
+# btop theme - Omarchy Amber Monochrome (Retro CRT)
+# Classic amber phosphor CRT screen look.
+# Deep warm blacks + soft amber text + bright #e68e0d highlights.
+# Forked from Matte Black, tuned for retro CRT aesthetic.
+# ────────────────────────────────────────────────────────────
+
+# Colors should be in 6 or 2 character hexadecimal or single spaced rgb decimal: "#RRGGBB", "#BW" or "0-255 0-255 0-255"
+
+# All graphs and meters can be gradients
+# For single color graphs leave "mid" and "end" variable empty.
+# Use "start" and "end" variables for two color gradient
+# Use "start", "mid" and "end" for three color gradient
+
+# Main background (empty = transparent / terminal default)
+theme[main_bg]=""
+
+# Main text color - soft amber phosphor
+theme[main_fg]="#d4b070"
+
+# Title color for boxes - dark warm amber-brown
+theme[title]="#705030"
+
+# Highlight color for keyboard shortcuts - bright accent
+theme[hi_fg]="#e68e0d"
+
+# Background color of selected item - glowing accent
+theme[selected_bg]="#e68e0d"
+
+# Foreground color of selected item - deep CRT black for contrast
+theme[selected_fg]="#0c0c0c"
+
+# Color of inactive/disabled text
+theme[inactive_fg]="#4a3220"
+
+# Text on top of graphs
+theme[graph_text]="#c9a36a"
+
+# Background of percentage meters
+theme[meter_bg]="#1a120c"
+
+# Misc colors in processes box
+theme[proc_misc]="#a08050"
+
+# Box outline colors - dark warm browns (monochrome amber family)
+theme[cpu_box]="#3a2a1f"
+theme[mem_box]="#3a2a1f"
+theme[net_box]="#3a2a1f"
+theme[proc_box]="#3a2a1f"
+
+# Box divider and small boxes line
+theme[div_line]="#4a3220"
+
+# Temperature graph: dark warm → bright accent → deep warm
+theme[temp_start]="#5a3a25"
+theme[temp_mid]="#e68e0d"
+theme[temp_end]="#1a120c"
+
+# CPU graph
+theme[cpu_start]="#5a3a25"
+theme[cpu_mid]="#e68e0d"
+theme[cpu_end]="#1a120c"
+
+# Mem/Disk meters
+theme[free_start]="#5a3a25"
+theme[free_mid]="#e68e0d"
+theme[free_end]="#1a120c"
+
+theme[cached_start]="#5a3a25"
+theme[cached_mid]="#e68e0d"
+theme[cached_end]="#1a120c"
+
+theme[available_start]="#5a3a25"
+theme[available_mid]="#e68e0d"
+theme[available_end]="#1a120c"
+
+theme[used_start]="#5a3a25"
+theme[used_mid]="#e68e0d"
+theme[used_end]="#1a120c"
+
+# Network graphs
+theme[download_start]="#5a3a25"
+theme[download_mid]="#e68e0d"
+theme[download_end]="#1a120c"
+
+theme[upload_start]="#5a3a25"
+theme[upload_mid]="#e68e0d"
+theme[upload_end]="#1a120c"
+
+# Process threads / usage gradient (subtle warm ramp)
+theme[process_start]="#4a3220"
+theme[process_mid]="#8a6640"
+theme[process_end]="#c9a36a"
