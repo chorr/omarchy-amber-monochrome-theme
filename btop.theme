@@ -91,3 +91,13 @@ theme[upload_end]="#1a120c"
 theme[process_start]="#4a3220"
 theme[process_mid]="#8a6640"
 theme[process_end]="#c9a36a"
+
+# Graph gradient colors
+theme[gradient_color_0]="#0c0c0c"
+theme[gradient_color_1]="#33281d"
+theme[gradient_color_2]="#2a1f12"
+theme[gradient_color_3]="#5f4635"
+theme[gradient_color_4]="#8a5a3a"
+theme[gradient_color_5]="#c99a4e"
+theme[gradient_color_6]="#e68e0d"
+theme[gradient_color_7]="#f8e8c0"

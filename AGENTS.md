@@ -1,47 +1,61 @@
 # Amber Monochrome Theme
 
-Custom Omarchy theme project — Retro CRT amber phosphor monochrome style.
+Custom Omarchy theme — retro CRT amber phosphor monochrome.
 
-## Scope
+## Design Concept
 
-This repository contains only theme assets for Omarchy:
+- Background is deep warm-black (`#0c0c0c`), like old CRT glass
+- Main text is soft glowing amber (`#c9a36a`)
+- Single fixed accent (`#e68e0d`) is reserved for the brightest highlights: selections, shortcuts, graph peaks, workspace markers
+- Every semantic color stays in the black → dark amber-brown → golden amber → bright amber family
+- No cool grays or unrelated hues
 
-- Color definitions (`colors.toml`)
-- Application themes (btop, icons, Neovim, VS Code)
-- Wallpapers and lock screen assets
-- Metadata for `omarchy theme install`
+## Color Palette
 
-## Development Notes
+| Role | Color | Hex |
+|------|-------|-----|
+| Accent | brightest phosphor highlight, `blue` | `#e68e0d` |
+| Selection | dim lit phosphor area | `#2a1f12` |
+| Foreground | main phosphor text | `#c9a36a` |
+| Bright foreground | full-intensity phosphor | `#f8e8c0` |
+| Background | deep CRT black | `#0c0c0c` |
+| Muted | comments, inactive | `#5f4635` |
 
-- The theme is installed by cloning this repo into `~/.config/omarchy/themes/amber-monochrome/`
-- After changes to source here, either:
-  - Re-clone / rsync to the installed location, or
-  - Run `omarchy theme set amber-monochrome` after manually syncing
-- `omarchy theme refresh` or full `omarchy refresh` may be needed for some components (waybar, etc.)
-- Previews (`preview.png`, `preview-unlock.png`) should be updated when the visual identity changes significantly.
+## Color Rules
 
-## Retro CRT Concept
+- Accent is the only high-saturation highlight
+- "Red" slots stay dim amber-brown so alerts still read on an amber tube
+- Yellow/green/cyan are golden or warm-amber variants, not cool hues
+- Omarchy 4.0 maps terminal/editor cursor to `bright_foreground`; do not rely on a `cursor` key
+- Active Hyprland border uses the accent at 45deg via `hyprland_active_border`
 
-The palette is designed to feel like an old amber phosphor CRT terminal:
+## Theme Files
 
-- Background is deep warm-black (#0c0c0c) — like the dark glass of a classic monitor.
-- Main text uses soft glowing amber (#c9a36a) — the characteristic lit phosphor look.
-- The single fixed accent (#e68e0d) is reserved for the brightest, most intense highlights (selections, shortcuts, graph peaks, cursor). This mimics the "full brightness" part of the phosphor when the beam is strongest.
-- Every color in the 16-color ANSI set stays inside the black → dark amber-brown → golden amber → bright amber family. There are no cool grays or unrelated hues.
+- `colors.toml` - Omarchy 4.0 semantic palette (source of truth for generated app configs)
+- `shell.lock.toml` - Lock-screen chrome override (amber borders)
+- `bar/workspaces.qml` - 4.0 bar override: focused/urgent workspace markers use `accent`
+- `btop.theme` - btop override to keep the CRT amber graph ramp
+- `neovim.lua` - Neovim colorscheme (matteblack)
+- `vscode.json` - VS Code theme (Matte Black)
+- `keyboard.rgb` - Keyboard RGB color
+- `icons.theme` - Icon theme (Yaru-dark)
+- `unlock.png` - Lock-screen shape asset
+- `preview.png` - Desktop preview
+- `preview-unlock.png` - Lock-screen preview image
+- `backgrounds/` - Wallpapers
 
-This creates a cohesive "everything is rendered on one old amber tube" feeling.
+## Local Development
 
-## Useful Commands (on target machine)
+Omarchy 4.0 copies the theme into `~/.local/state/omarchy/current/theme` and generates app configs from `colors.toml`. After editing theme files, run `omarchy theme refresh` (or `omarchy theme set <name>`). Saving a file is not enough.
 
-```bash
-omarchy theme list
-omarchy theme current
-omarchy theme set amber-monochrome
-omarchy theme bg next
-omarchy restart waybar
-omarchy restart terminal
-```
+A symlink from `~/.config/omarchy/themes/<name>` to a working copy is enough for iteration. `omarchy theme update` skips symlinks.
 
-## License
+`bar/workspaces.qml` is a custom bar widget. To use it, point the `omarchy.workspaces` entry in `~/.config/omarchy/shell.json` at that file with `type = "qml"`.
 
-See upstream Matte Black and Omarchy for asset origins. Theme-specific configuration is provided under the same terms as the Omarchy project unless otherwise noted.
+## Public Repository
+
+This repo is public. Keep committed docs and messages useful to any reader, not just this machine.
+
+- Do not commit host-specific paths, clone names, or "this machine" setup
+- Describe workflows in generic terms so they apply to anyone installing or developing the theme
+- Commit messages follow the existing English history; do not mention local checkout layout or unpublished machine state

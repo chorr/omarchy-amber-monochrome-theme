@@ -1,0 +1,11 @@
+background       = "#0c0c0c"
+background-alpha = 0.8
+text             = "#c9a36a"
+placeholder      = "#5f4635"
+text-error       = "#9a5c35"
+border           = "#e68e0d"
+border-active    = "#e68e0d"
+border-error     = "#9a5c35"
+border-alpha     = 1.0
+selection        = "#e68e0d"
+selection-alpha  = 0.45
